@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111612">
+  <meta name="description" content="SurviveX: an interactive zombie-city digital twin demonstrating Dijkstra, 0/1 Knapsack and Held–Karp TSP with Arduino LEDs.">
+  <title>SurviveX — Survival, computed.</title>
+  <style>html{background:#101410;color:#e9eee6;font-family:system-ui,sans-serif}body{margin:0}button,input,select{font:inherit}a{color:inherit}.boot{padding:4rem;text-align:center}.skip{position:absolute;left:-10000px}.skip:focus{left:1rem;top:1rem;z-index:100}</style>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <script defer src="js/data.js"></script>
+  <script defer src="js/algorithms/dijkstra.js"></script>
+  <script defer src="js/algorithms/knapsack.js"></script>
+  <script defer src="js/algorithms/tsp.js"></script>
+  <script defer src="js/utils.js"></script>
+  <script defer src="js/map.js"></script>
+  <script defer src="js/hardware.js"></script>
+  <script defer src="js/breadboard.js"></script>
+  <script defer src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <a class="brand" href="#/dashboard" aria-label="SurviveX dashboard"><span class="brand-symbol">S<span>×</span></span><span>SURVIVE<span class="toxic">X</span><small>SURVIVAL, COMPUTED.</small></span></a>
+    <nav aria-label="Main navigation"><a href="#/dashboard">Dashboard</a><a href="#/algorithms">Algorithms</a><a href="#/breadboard">Connections</a><a href="#/about">About</a></nav>
+    <button id="usb-connect" class="button quiet"><span class="status-dot"></span><span>Connect Arduino</span></button>
+  </header>
+  <div class="system-strip"><span><i class="signal-dot"></i> SYSTEM ONLINE</span><span id="connection-status">BROWSER SIMULATION</span><span class="strip-end">8 LOCATIONS / 7 ROADS / 3 ALGORITHMS</span></div>
+  <main id="main" tabindex="-1"><div class="boot">Preparing the city…</div></main>
+  <footer id="footer"></footer>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <noscript><p class="boot">Please enable JavaScript to run the interactive algorithms.</p></noscript>
+</body>
+</html>
